@@ -1,0 +1,56 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:CalculadoraAvalonia.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        d:DesignWidth="400" d:DesignHeight="600"
+        x:Class="CalculadoraAvalonia.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Calculadora Avalonia">
+
+    <!-- DataContext de design: apenas para o visualizador da IDE -->
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <!-- Grid principal contendo a interface da calculadora -->
+    <Grid RowDefinitions="Auto, *, Auto" Margin="10">
+        
+        <!-- Caixa de texto para exibir números e resultados -->
+        <TextBox Grid.Row="0"
+                 x:Name="Display"
+                 FontSize="48"
+                 IsReadOnly="True"
+                 Text="{Binding Display}"
+                 HorizontalAlignment="Stretch"
+                 HorizontalContentAlignment="Right"
+                 Margin="0,10,0,10"/>
+
+        <!-- Botões organizados em uma grade uniforme. -->
+        <UniformGrid Grid.Row="1" Columns="4" Rows="5" HorizontalAlignment="Stretch">
+            
+            <!-- Números e operadores -->
+            <Button Content="7" Command="{Binding NumberCommand}" CommandParameter="7"/>
+            <Button Content="8" Command="{Binding NumberCommand}" CommandParameter="8"/>
+            <Button Content="9" Command="{Binding NumberCommand}" CommandParameter="9"/>
+            <Button Content="/" Command="{Binding OperatorCommand}" CommandParameter="/"/>
+            
+            <Button Content="4" Command="{Binding NumberCommand}" CommandParameter="4"/>
+            <Button Content="5" Command="{Binding NumberCommand}" CommandParameter="5"/>
+            <Button Content="6" Command="{Binding NumberCommand}" CommandParameter="6"/>
+            <Button Content="*" Command="{Binding OperatorCommand}" CommandParameter="*"/>
+            
+            <Button Content="1" Command="{Binding NumberCommand}" CommandParameter="1"/>
+            <Button Content="2" Command="{Binding NumberCommand}" CommandParameter="2"/>
+            <Button Content="3" Command="{Binding NumberCommand}" CommandParameter="3"/>
+            <Button Content="-" Command="{Binding OperatorCommand}" CommandParameter="-"/>
+            
+            <Button Content="0" Command="{Binding NumberCommand}" CommandParameter="0"/>
+            <Button Content="C" Command="{Binding ClearCommand}"/>
+            <Button Content="=" Command="{Binding CalculateCommand}"/>
+            <Button Content="+" Command="{Binding OperatorCommand}" CommandParameter="+"/>
+        </UniformGrid>
+    </Grid>
+</Window>
