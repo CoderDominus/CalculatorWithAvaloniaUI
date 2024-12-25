@@ -1,10 +1,10 @@
 # CalculatorWithAvaloniaUI
 Make by Daniel Lima
 
-# Relatório de Aprendizado: Criando uma Calculadora em C# com Avalonia e MVVM
+# Criando uma Calculadora em C# com Avalonia e MVVM
 
 ## Introdução
-Este relatório descreve os principais conceitos, boas práticas e padrões de projeto que um programador iniciante pode aprender ao desenvolver uma calculadora simples usando C# com Avalonia UI e o padrão MVVM (Model-View-ViewModel).
+Este descreve os principais conceitos, boas práticas e padrões de projeto que um programador iniciante pode aprender ao desenvolver uma calculadora simples usando C# com Avalonia UI e o padrão MVVM (Model-View-ViewModel).
 
 Através desse projeto, foram abordados conceitos fundamentais de:
 - Linguagem C#
@@ -16,7 +16,7 @@ Através desse projeto, foram abordados conceitos fundamentais de:
 - Convenções de nomeação e boas práticas
 - Padrão MVVM
 
-Este relatório visa consolidar esse aprendizado para que o desenvolvedor possa aplicar esses conceitos em outros projetos de maior complexidade.
+Este projeto visa consolidar esse aprendizado para que o desenvolvedor possa aplicar esses conceitos em outros projetos de maior complexidade.
 
 ---
 
