@@ -10,6 +10,40 @@
     </Application.DataTemplates>
   
     <Application.Styles>
-        <FluentTheme />
+        <FluentTheme/>
     </Application.Styles>
+             <Application.Resources>
+                 <!-- Tema Personalizado para Botões -->
+                 <ControlTheme x:Key="{x:Type Button}" TargetType="Button">
+                     <Setter Property="Background" Value="#0078D7"/>  <!-- Azul -->
+                     <Setter Property="Foreground" Value="White"/>
+                     <Setter Property="FontSize" Value="22"/>
+                     <Setter Property="Padding" Value="10"/>
+                     <Setter Property="CornerRadius" Value="12"/>
+      
+                     <!-- Template Personalizado (Botão Redondo) -->
+                     <Setter Property="Template">
+                         <ControlTemplate>
+                             <Panel>
+                                 <Ellipse Fill="{TemplateBinding Background}"
+                                          HorizontalAlignment="Stretch"
+                                          VerticalAlignment="Stretch"/>
+                                 <ContentPresenter x:Name="PART_ContentPresenter"
+                                                   Content="{TemplateBinding Content}"
+                                                   Margin="{TemplateBinding Padding}"/>
+                             </Panel>
+                         </ControlTemplate>
+                     </Setter>
+
+                     <!-- Interações (Hover e Click) -->
+                     <Style Selector="^:pointerover">
+                         <Setter Property="Background" Value="SteelBlue"/>  <!-- Hover: -->
+                         <Setter Property="Foreground" Value="Silver"/>
+                     </Style>
+
+                     <Style Selector="^:pressed">
+                         <Setter Property="Background" Value="DarkBlue"/>  <!-- Clique: -->
+                     </Style>
+                 </ControlTheme>
+             </Application.Resources>
 </Application>
