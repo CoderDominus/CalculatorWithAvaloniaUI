@@ -1,6 +1,7 @@
 # CalculatorWithAvaloniaUI
 Make by Daniel Lima
-Nota da Versão: dotNET 8.0 / Avalonia 4.3
+
+- Nota da Versão: dotNET 8.0 / Avalonia 4.3
 
 # Criando uma Calculadora em C# com Avalonia e MVVM
 
